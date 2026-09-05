@@ -1,8 +1,5 @@
 # ReconAI — AI Finance Controller
 
-**Track 04: AI Finance Controller — Multi-Source Payment Reconciliation**
-Built for the Razorpay AI Buildathon 2026 (2-hour build).
-
 ## 1. Problem
 
 Merchants receive financial data from three disconnected systems — orders,
@@ -175,18 +172,3 @@ False negatives:   0
   thresholds.
 - Support multi-currency and partial settlements.
 - Add a proper database + review queue with resolution workflow.
-
-## 16. 3-minute demo script
-
-1. **(30s)** Open the dashboard, point at KPI cards: "100 records, 75%
-   auto-matched, 100% accuracy against a hidden ground truth."
-2. **(45s)** Click **Run Reconciliation** live, show processing time and
-   throughput — "under a second for 100 records."
-3. **(45s)** Scroll to the exception table — "22 exceptions the
-   deterministic engine couldn't resolve on its own."
-4. **(45s)** Open a transaction detail — e.g. an `AMOUNT_MISMATCH` case —
-   read the AI explanation and evidence out loud, show the confidence and
-   the AUTO_RESOLVE / HUMAN_REVIEW split.
-5. **(15s)** Open the audit trail expander — "every decision is logged
-   and explainable, and we never let the AI touch the ledger directly —
-   only a deterministic policy gate can approve an auto-resolution."
