@@ -116,11 +116,7 @@ Computed in `src/metrics.py` against the hidden ground truth, over the
   (wrongly sent to review or missed)
 - Processing time and throughput (records/sec)
 
-## 10. Screenshots
-
-_(Run the app and take screenshots here for your submission.)_
-
-## 11. Installation
+## 10. Installation
 
 ```bash
 cd reconai
@@ -128,7 +124,7 @@ pip install -r requirements.txt
 cp .env.example .env   # optional — leave OPENAI_API_KEY blank to use fallback mode
 ```
 
-## 12. Running locally
+## 11. Running locally
 
 ```bash
 streamlit run app.py
@@ -138,7 +134,7 @@ Then click **▶ Run Reconciliation** in the sidebar. The batch size and
 random seed are adjustable; seed 42 reproduces the exact demo numbers
 below.
 
-## 13. Testing
+## 12. Testing
 
 ```bash
 pytest tests/ -v
@@ -149,7 +145,7 @@ settlement, duplicate detection, unresolved/ambiguous records, the policy
 gate's allow-list + confidence threshold, and end-to-end metric
 calculation on a full batch.
 
-## 14. Example output (seed=42, n=100)
+## 13. Example output (seed=42, n=100)
 
 ```
 Processed 100 records in ~0.12s (≈850 records/sec)
@@ -163,7 +159,7 @@ False positives:   0
 False negatives:   0
 ```
 
-## 15. Limitations
+## 14. Limitations
 
 - Matching thresholds (₹1 exact, ₹5 "likely") are illustrative, not
   calibrated on real transaction data.
@@ -172,7 +168,7 @@ False negatives:   0
 - No persistence layer — each run recomputes from scratch (by design,
   for a 2-hour MVP).
 
-## 16. Future improvements
+## 15. Future improvements
 
 - Calibrate matching tolerances against real settlement data.
 - Add a feedback loop where human review decisions retrain the confidence
@@ -180,7 +176,7 @@ False negatives:   0
 - Support multi-currency and partial settlements.
 - Add a proper database + review queue with resolution workflow.
 
-## 17. 3-minute demo script
+## 16. 3-minute demo script
 
 1. **(30s)** Open the dashboard, point at KPI cards: "100 records, 75%
    auto-matched, 100% accuracy against a hidden ground truth."
